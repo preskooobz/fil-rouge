@@ -1,0 +1,78 @@
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .nav-link {
+    color: #000;
+    position: relative;
+    transition: color 0.2s;
+        }
+.navbar .nav-link:hover {
+    color: #dc3545; /* Rouge Bootstrap */
+        }
+.navbar .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #dc3545;
+    transition: width 0.2s;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+        }
+.navbar .nav-link:hover::after {
+    width: 100%;
+        }
+
+    /* Animation machine à écrire */
+#texte-anim {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff00cc, #6600cc, #0066ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    white-space: pre-line;
+    overflow: hidden;
+    border-right: 0.15em solid transparent;
+    }
+
+    /* Animation d’apparition lente */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.titre {
+    background-color: aliceblue;
+}
+.back-arrow {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.back-arrow:hover {
+    color: #0a58ca;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+       }
