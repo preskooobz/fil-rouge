@@ -4,14 +4,8 @@ include_once 'db.php';
 
 // ConnexionBD() est une fonction qui permet de se connecter à la base de données
 function connexionBD() {
-    try {
-       $bd = new PDO('mysql:host=localhost;dbname=fil_rouge;charset=utf8mb4', 'root', '');
-        $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $bd;
-    } catch (PDOException $e) {
-        echo 'Erreur de connexion : ' . $e->getMessage();
-        exit();
-    }
+    // Réutilise la connexion PostgreSQL partagée définie dans db.php
+    return getPdoConnection();
 }
 
 
