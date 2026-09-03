@@ -31,9 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ];
 
         if ($user['role'] === 'admin') {
-            header("Location: /fil_rouge/ADMIN/Admin.php");
+            header("Location: /ADMIN/Admin.php");
         } else {
-            header("Location: /fil_rouge/ETUDIANT/Accueil_e.php");
+            header("Location: /ETUDIANT/Accueil_e.php");
         }
         exit;
     } else {
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['nom_utilisateur'] = $etudiant['email'];
             $_SESSION['role'] = 'etudiant';
 
-            header("Location: /fil_rouge/ETUDIANT/Accueil_e.php");
+            header("Location: /ETUDIANT/Accueil_e.php");
             exit;
         } else {
             $erreur = "Nom d'utilisateur ou mot de passe incorrect.";
