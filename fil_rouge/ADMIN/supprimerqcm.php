@@ -13,7 +13,7 @@ if (isset($_GET['id'])) {
     supprimerQCM($_GET['id']);
     // Redirection ou message de succès
     // Rediriger vers la liste des QCM
-    header("Location: /fil_rouge/ADMIN/listes_qcm.php");
+    header("Location: /ADMIN/listes_qcm.php");
     exit;
 } else {
     echo "QCM introuvable.";
