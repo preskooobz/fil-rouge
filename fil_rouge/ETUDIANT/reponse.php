@@ -6,7 +6,7 @@ session_start();
 
 if (!isset($_SESSION['id_etudiant'])) {
     // Redirige vers la page de connexion ou affiche un message d’erreur
-    header('Location: ../connexion.php');
+    header('Location: ../plateforme_qcm/connexion.php');
     exit;
 }
 

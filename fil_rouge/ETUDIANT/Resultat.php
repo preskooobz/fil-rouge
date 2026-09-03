@@ -3,7 +3,7 @@ include_once '../asset/db.php';
 include_once '../asset/header_e.php';
 session_start();
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'etudiant') {
-    header("Location: ../connexion.php");
+    header("Location: ../plateforme_qcm/connexion.php");
     exit;
 }
 if (!isset($_GET['qcm_id'])) {

@@ -3,7 +3,7 @@ include_once '../asset/db.php'; // Connexion à la BDD
 include_once '../asset/header_e.php'; // Inclure l'en-tête de la page
 session_start();
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'etudiant') {
-    header("Location: ../connexion.php");
+    header("Location: ../plateforme_qcm/connexion.php");
     exit;
 }
 ?>

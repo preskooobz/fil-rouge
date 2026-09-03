@@ -5,7 +5,7 @@ session_start();
 
 // Vérifie si l'utilisateur est un étudiant
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'etudiant') {
-    header("Location: ../connexion.php");
+    header("Location: ../plateforme_qcm/connexion.php");
     exit;
 }
 
