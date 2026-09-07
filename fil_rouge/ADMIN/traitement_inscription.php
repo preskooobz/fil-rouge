@@ -33,14 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $login = $_POST['login'];
-    $password = $_POST['password'];
-    ajouterEtudiant($nom, $prenom, $login, $password);
-    // Redirection ou message de succès
-}
 ?>
 
 <?php if ($message): ?>
