@@ -1,8 +1,7 @@
 <?php
+session_start();
 include_once '../asset/db.php';
 include_once '../asset/fonctions.php';
-include_once '../asset/header_e.php';
-session_start();
 
 if (!isset($_SESSION['id_etudiant'])) {
     // Redirige vers la page de connexion ou affiche un message d’erreur

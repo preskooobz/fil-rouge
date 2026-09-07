@@ -1,11 +1,11 @@
 <?php
-include_once '../asset/db.php';
-include_once '../asset/header_e.php';
 session_start();
+include_once '../asset/db.php';
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'etudiant') {
     header("Location: ../plateforme_qcm/connexion.php");
     exit;
 }
+include_once '../asset/header_e.php';
 if (!isset($_GET['qcm_id'])) {
     echo "QCM non spécifié.";
     exit;

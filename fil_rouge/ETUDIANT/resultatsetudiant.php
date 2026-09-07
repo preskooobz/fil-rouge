@@ -1,13 +1,13 @@
 <?php
-include_once '../asset/db.php';
-include_once '../asset/header_e.php';
 session_start();
+include_once '../asset/db.php';
 
 // Vérifie si l'utilisateur est un étudiant
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'etudiant') {
     header("Location: ../plateforme_qcm/connexion.php");
     exit;
 }
+include_once '../asset/header_e.php';
 $etudiant_id = $_SESSION['id'];
 
 // Récupérer les résultats de l'étudiant

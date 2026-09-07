@@ -1,11 +1,11 @@
 <?php
-include_once '../asset/db.php'; // Connexion à la BDD
-include_once '../asset/header_e.php'; // Inclure l'en-tête de la page
 session_start();
+include_once '../asset/db.php'; // Connexion à la BDD
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'etudiant') {
     header("Location: ../plateforme_qcm/connexion.php");
     exit;
 }
+include_once '../asset/header_e.php'; // Inclure l'en-tête de la page
 ?>
 <!DOCTYPE html>
 <html lang="fr">
