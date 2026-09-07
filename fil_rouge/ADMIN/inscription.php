@@ -1,11 +1,11 @@
 <?php
+session_start(); // Démarre la session PHP
 // Inclusion du fichier de connexion à la base de données
 include_once '../asset/db.php';
 // Inclusion du header de connexion (navbar, etc.)
 include_once '../asset/headerco.php';
 ?>
 <?php
-   session_start(); // Démarre la session PHP
     // Affiche un message d'erreur s'il existe dans la session
     if (isset($_SESSION['erreur'])) {
         echo '<div class="alert alert-danger">'.$_SESSION['erreur'].'</div>';

@@ -1,13 +1,11 @@
 <?php
-include_once '../asset/headeraccueil.php';
-include_once '../asset/db.php';
-
 session_start();
+include_once '../asset/db.php';
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     header("Location: ../plateforme_qcm/connexion.php");
     exit;
 }
-
+include_once '../asset/headeraccueil.php';
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +32,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
   <div class="d-flex flex-row justify-content-center flex-wrap gap-3">
 
     <div class="fade-in" style="min-width:220px;max-width:250px;">
-      <a href="creer_qcm.php" class="btn btn-danger w-100 py-3 mb-2">
+      <a href="Creer_QCM.php" class="btn btn-danger w-100 py-3 mb-2">
         <i class="bi bi-journal-plus me-2"></i>Créer un QCM
       </a>
     </div>

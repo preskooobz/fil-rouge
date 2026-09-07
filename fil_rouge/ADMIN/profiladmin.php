@@ -3,7 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
-    header('Location: connexion.php');
+    header('Location: ../plateforme_qcm/connexion.php');
     exit();
 }
 include_once '../asset/fonctions.php';

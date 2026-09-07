@@ -53,7 +53,7 @@ if (!isset($_SESSION['role'])) {
         </div>
         <?php if ($_SESSION['role'] === 'admin' || $_SESSION['role'] === 'prof'): ?>
         <div class="text-center mt-4">
-            <a href="creer_qcm.php" class="btn btn-success">
+            <a href="Creer_QCM.php" class="btn btn-success">
                 <i class="bi bi-plus-circle"></i> Créer un nouveau QCM
             </a>
         </div>
